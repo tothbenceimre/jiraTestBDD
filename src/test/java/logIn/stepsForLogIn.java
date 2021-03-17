@@ -4,8 +4,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.DashboardPage;
+import util.Driver;
 
 public class stepsForLogIn {
+    Driver driver = new Driver();
+    DashboardPage dashboardPage = new DashboardPage(driver.getDriver());
+
+
+
     @Given("we navigated to the dashboard page.")
     public void weHaveAJiraUserRegistered() {
 
@@ -16,7 +23,7 @@ public class stepsForLogIn {
 
     }
 
-    @When("we fill the username field with our username.")
+    @When("we fill the username field with our valid username.")
     public void weFillTheUsernameFieldWithOurUsername() {
 
     }
@@ -26,17 +33,17 @@ public class stepsForLogIn {
 
     }
 
-    @And("we click on {string} button.")
-    public void weClickOnButton(String button) {
+    @And("we click on 'Log in' button.")
+    public void weClickOnButton () {
 
     }
 
-    @Then("we are no longer able to see the {string} button on the top right.")
-    public void weAreNoLongerAbleToSeeTheButtonOnTheTopRight(String button) {
-
-    }
-
-    @And("we can see our avatar on the top right.")
+    @And("we navigate to our profile.")
     public void weCanClickOnOurAvatarOnTheTopRight() {
+    }
+
+    @Then("we can see our username under 'Summary'.")
+    public void weAreNoLongerAbleToSeeTheButtonOnTheTopRight() {
+
     }
 }
