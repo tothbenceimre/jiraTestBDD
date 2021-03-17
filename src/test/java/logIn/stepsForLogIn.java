@@ -18,11 +18,6 @@ public class stepsForLogIn {
 
     }
 
-    @And("we click on {string} button on the top right corner.")
-    public void weClickOnButtonOnTheTopRightCorner(String button) {
-
-    }
-
     @When("we fill the username field with our valid username.")
     public void weFillTheUsernameFieldWithOurUsername() {
 
