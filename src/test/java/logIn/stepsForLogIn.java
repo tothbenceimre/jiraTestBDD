@@ -6,13 +6,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class stepsForLogIn {
-    @Given("we have a Jira user registered.")
+    @Given("we navigated to the dashboard page.")
     public void weHaveAJiraUserRegistered() {
-
-    }
-
-    @And("we navigated to the dashboard page.")
-    public void weNavigatedToTheDashboardPage() {
 
     }
 
@@ -41,7 +36,7 @@ public class stepsForLogIn {
 
     }
 
-    @And("we can click on our avatar on the top right.")
+    @And("we can see our avatar on the top right.")
     public void weCanClickOnOurAvatarOnTheTopRight() {
     }
 }

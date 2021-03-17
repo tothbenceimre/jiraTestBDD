@@ -15,7 +15,6 @@ public class Driver {
     public Driver() {
         driver = new ChromeDriver();
         this.baseUrl = "https://jira-auto.codecool.metastage.net/secure/Dashboard.jspa";
-        driver.get(baseUrl);
         new WebDriverWait(driver, 40).until(
                 webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
         driver.manage().window().maximize();
@@ -32,5 +31,9 @@ public class Driver {
 
     public void close(){
         driver.close();
+    }
+
+    public void navigation (String url) {
+        driver.get(url);
     }
 }
