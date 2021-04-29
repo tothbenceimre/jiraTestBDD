@@ -34,14 +34,8 @@ public class DashboardPage {
         loginButton.click();
     }
 
-    public boolean verifyUnsuccessfulLogin () {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-        wait.until(ExpectedConditions.visibilityOf(loginError));
-        return loginError.isDisplayed() && loginPageButton.isDisplayed();
-    }
-
-    public void navigateToLoginPage () {
-        loginPageButton.click();
+    public void clickOnLogIn () {
+        loginButton.click();
     }
 
 }
