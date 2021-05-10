@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProfilePage {
     WebDriver driver;
-    @FindBy(id = "up-d-username")
-    WebElement username;
+
+    @FindBy(id = "up-d-username") WebElement username;
 
     public ProfilePage(WebDriver driver) {
         this.driver = driver;

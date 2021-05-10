@@ -3,21 +3,21 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import util.Waiter;
 
 public class DashboardPage {
     WebDriver driver;
+    Waiter waiter;
 
     @FindBy(id = "login-form-username") WebElement usernameForm;
     @FindBy(id = "login-form-password") WebElement passwordForm;
     @FindBy(id = "login") WebElement loginButton;
-    @FindBy(xpath = "//*[@id=\"user-options\"]/a") WebElement loginPageButton;
-    @FindBy(xpath = "//div/p[contains(text(),'Sorry, your username and password are incorrect - please try again.')]") WebElement loginError;
+    @FindBy(xpath = "//p[@class='title']") WebElement logoutMessage;
 
     public DashboardPage(WebDriver driver) {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 100), this);
         this.driver = driver;
+        this.waiter = new Waiter(this.driver);
     }
 
     public void fillUserForm (String username) {
@@ -38,4 +38,7 @@ public class DashboardPage {
         loginButton.click();
     }
 
+    public boolean verifySuccessfulLogOut () {
+        return this.logoutMessage.getText().equals("You are now logged out. Any automatic login has also been stopped.");
+    }
 }
