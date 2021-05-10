@@ -17,7 +17,7 @@ public class stepsForLogIn {
     ProfilePage profilePage = new ProfilePage(driver.getDriver());
 
     @Given("we navigated to the dashboard page.")
-    public void weHaveAJiraUserRegistered() {
+    public void weNavigatedToTheDashboardPage() {
         driver.navigation(driver.getBaseUrl());
     }
 
