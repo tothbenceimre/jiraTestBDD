@@ -15,37 +15,37 @@ public class stepsForEditIssue {
 
     }
 
-    @And("we clicked on the {string} tab that is located on the bottom.")
-    public void weClickedOnTheTabThatIsLocatedOnTheBottom(String tab) {
+    @And("we clicked on the 'Create issue' tab that is located on the bottom.")
+    public void weClickedOnTheCreateIssueTabThatIsLocatedOnTheBottom () {
 
     }
 
     @And("we filled the issuetype with the correct issutetype.")
-    public void weFilledTheIssuetypeWithTheCorrectIssutetype() {
+    public void weFilledTheIssuetypeWithTheCorrectIssutetype () {
 
     }
 
     @And("we filled the summary with the correct summary.")
-    public void weFilledTheSummaryWithTheCorrectSummary() {
+    public void weFilledTheSummaryWithTheCorrectSummary () {
 
     }
 
-    @When("we click on {string} that is located under the issue's picture and summary.")
-    public void weClickOnThatIsLocatedUnderTheIssueSPictureAndSummary(String button) {
+    @When("we click on 'Edit' that is located under the issue's picture and summary.")
+    public void weClickOnEditThatIsLocatedUnderTheIssueSPictureAndSummary () {
 
     }
 
     @And("we filled the summary with a new value.")
-    public void weFilledTheSummaryWithANewValue() {
+    public void weFilledTheSummaryWithANewValue () {
 
     }
 
-    @And("we click on {string}.")
-    public void weFilledTheSummaryWithANewValue (String button) {
+    @And("we click on 'Update'.")
+    public void weClickOnUpdate () {
 
     }
 
     @Then("we can see our issue's summary is updated with the new summary value.")
-    public void weCanSeeOurIssueSSummaryIsUpdatedWithTheNewSummaryValue() {
+    public void weCanSeeOurIssueSSummaryIsUpdatedWithTheNewSummaryValue () {
     }
 }
