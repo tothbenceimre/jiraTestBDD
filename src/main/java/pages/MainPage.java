@@ -12,6 +12,7 @@ public class MainPage {
 
     @FindBy(xpath = "//*[@id=\"header-details-user-fullname\"]/span/span/img") WebElement avatar;
     @FindBy(id = "view_profile") WebElement viewProfileTab;
+    @FindBy(id = "log_out") WebElement logoutTab;
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
@@ -21,8 +22,20 @@ public class MainPage {
 
     public void navigateToProfile () {
         this.waiter.waitForElementToAppear(avatar);
-        avatar.click();
+        clickOnAvatar();
         viewProfileTab.click();
     }
 
+    public boolean avatarIsVisible () {
+        this.waiter.waitForElementToAppear(avatar);
+        return avatar.isDisplayed();
+    }
+
+    public void clickOnAvatar () {
+        avatar.click();
+    }
+
+    public void clickOnLogOutTab () {
+        logoutTab.click();
+    }
 }
