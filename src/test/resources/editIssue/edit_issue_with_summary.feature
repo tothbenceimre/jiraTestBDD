@@ -1,7 +1,7 @@
 Feature: Edit issue with summary is working
 
   Example: Edit issue with summary is working
-    Given we have a registered user.
+    Given we have a logged in.
     And we navigated to our project's issue page.
     And we clicked on the 'Create issue' tab that is located on the bottom.
     And we filled the issuetype with the correct issutetype.

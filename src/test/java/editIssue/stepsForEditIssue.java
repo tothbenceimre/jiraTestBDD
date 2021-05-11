@@ -4,10 +4,17 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.DashboardPage;
+import pages.MainPage;
+import util.Driver;
 
 public class stepsForEditIssue {
-    @Given("we have a registered user.")
-    public void weHaveARegisteredUser() {
+    Driver driver = new Driver();
+    DashboardPage dashboardPage = new DashboardPage(driver.getDriver());
+    MainPage mainPage = new MainPage(driver.getDriver());
+
+    @Given("we have a logged in.")
+    public void weHaveLoggedIn () {
     }
 
     @And("we navigated to our project's issue page.")
