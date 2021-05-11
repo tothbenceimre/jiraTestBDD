@@ -29,6 +29,10 @@ public class Driver {
         driver.close();
     }
 
+    public String getProjectURL (String projectId) {
+        return "https://jira-auto.codecool.metastage.net/projects/" + projectId + "/issues";
+    }
+
     public void navigation (String url) {
         driver.get(url);
     }
