@@ -40,4 +40,10 @@ public class ProjectsIssuePage {
     public WebElement getIssueType (String issue) {
         return driver.findElement(By.xpath("//form[@class='iic-widget__form aui']//a[text()= '" + issue + "']"));
     }
+
+    public void selectIssueType (String issue) {
+        clickOnIssueTypeField();
+        this.waiter.waitForElementToAppear(getIssueType(issue));
+        getIssueType(issue).click();
+    }
 }
