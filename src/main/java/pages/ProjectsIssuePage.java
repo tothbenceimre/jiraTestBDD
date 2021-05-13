@@ -35,4 +35,6 @@ public class ProjectsIssuePage {
         submitSummaryField();
     }
 
+    public void clickOnIssueTypeField () { issueTypeField.click();}
+
 }
