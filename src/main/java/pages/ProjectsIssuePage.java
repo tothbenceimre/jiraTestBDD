@@ -28,5 +28,5 @@ public class ProjectsIssuePage {
 
     public void fillSummaryField (String summary) { summaryField.sendKeys(summary); }
 
-
+    public void submitSummaryField () {summaryField.sendKeys(Keys.ENTER);}
 }
