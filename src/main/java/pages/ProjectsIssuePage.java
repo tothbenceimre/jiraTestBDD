@@ -26,5 +26,7 @@ public class ProjectsIssuePage {
 
     public void clickOnCreateButton () { createButton.click(); }
 
+    public void fillSummaryField (String summary) { summaryField.sendKeys(summary); }
+
 
 }
