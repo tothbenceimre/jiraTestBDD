@@ -46,4 +46,10 @@ public class ProjectsIssuePage {
         this.waiter.waitForElementToAppear(getIssueType(issue));
         getIssueType(issue).click();
     }
+
+    public void createIssue (String issue, String summary) {
+        clickOnCreateButton();
+        selectIssueType(issue);
+        fillAndSubmitSummaryField(summary);
+    }
 }
