@@ -37,4 +37,7 @@ public class ProjectsIssuePage {
 
     public void clickOnIssueTypeField () { issueTypeField.click();}
 
+    public WebElement getIssueType (String issue) {
+        return driver.findElement(By.xpath("//form[@class='iic-widget__form aui']//a[text()= '" + issue + "']"));
+    }
 }
