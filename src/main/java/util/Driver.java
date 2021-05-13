@@ -34,6 +34,12 @@ public class Driver {
     }
 
     public void navigation (String url) {
+//        this.waiter.waitForPageToLoadCompletely();
+        this.waiter.waitCertainAmountOfTime(1000000);
         driver.get(url);
+    }
+
+    public void acceptAlert () {
+        driver.switchTo().alert().accept();
     }
 }
